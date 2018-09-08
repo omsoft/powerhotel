@@ -1,0 +1,28 @@
+<h1>Users#index</h1>
+ 
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">First_name</th>
+	      <th scope="col">Last_name</th>
+	      <th scope="col">Email</th>
+	      <th scope="col" colspan="3"></th>
+	    </tr>
+	  </thead>
+	 
+	  <tbody>
+	    <% @users.each do |u| %>
+	      <tr>
+	        <td><%= u.first_name %></td>
+	        <td><%= u.last_name %></td>
+	        <td><%= u.email	%></td>
+	        <td><%= link_to "Edit", edit_user_path(u) %></td>
+	        <td><%= link_to "Destroy", u, method: :delete, data: { confirm: "Are you sure?" } %></td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+	 
+	<br>
+	 
+	<%= link_to "New user", new_user_path, class: "btn btn-success" %>

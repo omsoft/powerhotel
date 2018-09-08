@@ -1,0 +1,107 @@
+# Italian translation for Devise 3.5
+# Date: 2015-08-20
+# Author: epistrephein
+# Note: Thanks to xpepper (https://gist.github.com/xpepper/8052632)
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+it:
+  devise:
+    confirmations:
+      new:
+        resend_confirmation_instructions: Invia di nuovo le istruzioni per la conferma
+      confirmed: "Il tuo account Ã¨ stato correttamente confermato."
+      send_instructions: "Entro qualche minuto riceverai un messaggio email con le istruzioni per confermare il tuo account."
+      send_paranoid_instructions: "Se il tuo indirizzo email esiste nel nostro database, entro qualche minuto riceverai un messaggio email con le istruzioni per confermare il tuo account."
+    failure:
+      already_authenticated: "Hai giÃ  effettuato l'accesso."
+      inactive: "Il tuo account non Ã¨ ancora stato attivato."
+      invalid: "%{authentication_keys} o password non validi."
+      locked: "Il tuo account Ã¨ bloccato."
+      last_attempt: "Hai un altro tentativo prima che il tuo account venga bloccato."
+      not_found_in_database: "%{authentication_keys} o password non validi."
+      timeout: "La tua sessione Ã¨ scaduta, accedi nuovamente per continuare."
+      unauthenticated: "Devi accedere o registrarti per continuare."
+      unconfirmed: "Devi confermare il tuo indirizzo email per continuare."
+    mailer:
+      confirmation_instructions:
+        action: Conferma il mio account
+        greeting: Benvenuto %{recipient}!
+        instruction: 'Puoi confermare il tuo account cliccando sul link qui sotto:'
+        subject: "Istruzioni per la conferma"
+      reset_password_instructions:
+        action: Cambia la mia password
+        greeting: Ciao %{recipient}!
+        instruction: Qualcuno ha richiesto di resettare la tua password, se lo vuoi davvero puoi farlo cliccando sul link qui sotto.
+        instruction_2: Se non sei stato tu ad effettuare questa richiesta puoi ignorare questa mail.
+        instruction_3: La tua password non cambierÃ  finchÃ¨ non accederai al link sopra.
+        subject: "Istruzioni per reimpostare la password"
+      unlock_instructions:
+        action: Sblocca il mio account
+        greeting: Ciao %{recipient}!
+        instruction: 'Clicca sul link qui sotto per sbloccare il tuo account:'
+        message: Il tuo account Ã¨ stato bloccato a seguito di un numero eccessivo di tentativi di accesso falliti.
+        subject: "Istruzioni per sbloccare l'account"
+    passwords:
+      edit:
+        change_my_password: 
+        change_your_password: Cambia la tua password
+        confirm_new_password: Conferma la nuova password
+        new_password: Nuova password
+      new:
+        forgot_your_password: Password dimenticata?
+        send_me_reset_password_instructions: Inviami le istruzioni per resettare la password
+      no_token: "Non Ã¨ possibile accedere a questa pagina se non provieni da una e-mail di ripristino della password. Se provieni da una e-mail di ripristino della password, assicurarti di utilizzare l'URL completo."
+      send_instructions: "Entro qualche minuto riceverai un messaggio email con le istruzioni per reimpostare la tua password."
+      send_paranoid_instructions: "Se il tuo indirizzo email esiste nel nostro database, entro qualche minuto riceverai un messaggio email con le istruzioni per ripristinare la password."
+      updated: "La tua password Ã¨ stata cambiata correttamente. Ora sei collegato."
+      updated_not_active: "La tua password Ã¨ stata cambiata correttamente."
+    registrations:
+      edit:
+        are_you_sure: Sei sicuro?
+        cancel_my_account: Rimuovi il mio account
+        currently_waiting_confirmation_for_email: 
+        leave_blank_if_you_don_t_want_to_change_it: lascia in bianco se non vuoi cambiarla
+        title: Modifica %{resource}
+        unhappy: 
+        update: 
+        we_need_your_current_password_to_confirm_your_changes: abbiamo bisogno della tua password attuale per confermare i cambiamenti
+      new:
+        sign_up: Registrati
+      destroyed: "Arrivederci! Il tuo account Ã¨ stato cancellato. Speriamo di rivederti presto."
+      signed_up: "Benvenuto! Ti sei registrato correttamente."
+      signed_up_but_inactive: "Ti sei registrato correttamente. Tuttavia non puoi effettuare l'accesso perchÃ© il tuo account non Ã¨ stato ancora attivato."
+      signed_up_but_locked: "Ti sei registrato correttamente. Tuttavia non puoi effettuare l'accesso perchÃ© il tuo account Ã¨ bloccato."
+      signed_up_but_unconfirmed: "Ti sei registrato correttamente. Un messaggio con il link per confermare il tuo account Ã¨ stato inviato al tuo indirizzo email."
+      update_needs_confirmation: "Il tuo account Ã¨ stato aggiornato, tuttavia Ã¨ necessario verificare il tuo nuovo indirizzo email. Entro qualche minuto riceverai un messaggio email con le istruzioni per confermare il tuo nuovo indirizzo email."
+      updated: "Il tuo account Ã¨ stato aggiornato."
+    sessions:
+      signed_in: "Accesso effettuato con successo."
+      signed_out: "Sei uscito correttamente."
+      already_signed_out: "Sei uscito correttamente."
+      new:
+        sign_in: Accedi
+    unlocks:
+      new:
+        resend_unlock_instructions: Invia di nuovo le istruzioni per lo sblocco
+      send_instructions: "Entro qualche minuto riceverai un messaggio email con le istruzioni per sbloccare il tuo account."
+      send_paranoid_instructions: "Se il tuo indirizzo email esiste nel nostro database, entro qualche minuto riceverai un messaggio email con le istruzioni per sbloccare il tuo account."
+      unlocked: "Il tuo account Ã¨ stato correttamente sbloccato. Accedi per continuare."
+    shared:
+      links:
+        back: Indietro
+        didn_t_receive_confirmation_instructions: Non hai ricevuto le istruzioni per la conferma?
+        didn_t_receive_unlock_instructions: Non hai ricevuto le istruzioni per lo sblocco?
+        forgot_your_password: Password dimenticata?
+        sign_in: Accedi
+        sign_in_with_provider: Accedi con %{provider}
+        sign_up: Registrati
+  errors:
+    messages:
+      already_confirmed: "Ã¨ stato giÃ  confermato, prova ad effettuare un nuovo accesso"
+      confirmation_period_expired: "deve essere confermato entro %{period}, si prega di richiederne uno nuovo"
+      expired: "Ã¨ scaduto, si prega di richiederne uno nuovo"
+      not_found: "non trovato"
+      not_locked: "non era bloccato"
+      not_saved:
+        one: "Un errore ha impedito di salvare questo %{resource}:"
+        other: "%{count} errori hanno impedito di salvare questo %{resource}:"

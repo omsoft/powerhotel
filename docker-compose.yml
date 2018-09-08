@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  app: &app_base
+    env_file: .env
+    build: .
+    #command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'"
+    command: 'bin/start'
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - queue
+
+  queue:
+    # import app's config
+    <<: *app_base
+    ports: [] # dont open 300 also, it would collide with app's
+    depends_on:
+      - db
+    command: 'bin/start_queue'
+
+  db:
+    image: postgres:9.4
+    ports:
+      - "5432:5432"

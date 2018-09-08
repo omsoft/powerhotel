@@ -1,0 +1,15 @@
+<% provide(:title, "Edit user") %>
+<h1>Update user profile</h1>
+
+    <%= form_for(@hotel, html: { class: "" }) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= render 'form', f: f %>
+      
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+        </div>
+      </div>
+
+    <% end %>

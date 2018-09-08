@@ -1,0 +1,15 @@
+== README
+
+This is a UalaTest App!
+
+Things that can be improved in this application:
+
+* Use a realtime currency bank to convert currencies, instead of specifying rates by hand
+
+* More robust user roles system
+
+* Add-on Services (caching mechanism, etc.)
+
+* and use a better interface, of course!
+
+
