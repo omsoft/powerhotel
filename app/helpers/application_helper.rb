@@ -9,12 +9,14 @@ module ApplicationHelper
     end
   end
 
+  # used as a block on views to initialize Presenters
   def present(model, presenter_class=nil)
     klass = presenter_class || "#{model.class}Presenter".constantize
     presenter = klass.new(model, self)
     yield(presenter) if block_given?
   end
 
+  # Create and return a DIV with flash messages
   def rails_messages
       ret = ''
       %w{notice warning error message success alert}.each do |message|
