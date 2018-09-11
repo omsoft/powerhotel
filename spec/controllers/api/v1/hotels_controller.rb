@@ -14,8 +14,7 @@ RSpec.describe Api::V1::HotelsController, type: :controller do
 
       request.env["ACCEPT"] = 'application/json'
       request.env['HTTP_ACCEPT_LANGUAGE'] = 'en-US'
-      request.headers['X-AUTH-EMAIL'] = "#{user.email}"
-      request.headers['X-AUTH-TOKEN'] = "#{user.authentication_token}"
+      authWithToken(user)
 
       get :index
     end
@@ -25,8 +24,9 @@ RSpec.describe Api::V1::HotelsController, type: :controller do
     end
 
     it "returns an unauthorized status response with an invalid user" do
-      request.headers['X-AUTH-EMAIL'] = "non_existing@email.com"
-      request.headers['X-AUTH-TOKEN'] = "an_invalid_token"
+      #request.headers['X-AUTH-EMAIL'] = "non_existing@email.com"
+      #request.headers['X-AUTH-TOKEN'] = "an_invalid_token"
+      clearToken
       get :index
       expect(response).to have_http_status 401
     end
@@ -37,7 +37,8 @@ RSpec.describe Api::V1::HotelsController, type: :controller do
       expect(Delayed::Job.count).to eq(2)
 
       # prep a wrong request
-      request.headers['X-AUTH-TOKEN'] = "an_invalid_token"
+      #request.headers['X-AUTH-TOKEN'] = "an_invalid_token"
+      clearToken
       get :index
       # delayed job count should be still 2
       expect(Delayed::Job.count).to eq(2)
