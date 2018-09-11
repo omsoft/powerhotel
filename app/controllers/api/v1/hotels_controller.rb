@@ -13,11 +13,11 @@ module Api
 				}), status: :ok
 			end
 
+			private
+
 			def launch_hotel_views
 				HotelViews.update(@hotels.pluck(:id))
 			end
-
-			private
 
 			def extract_country_from_accept_language_header
 				request.env['HTTP_ACCEPT_LANGUAGE'].scan(/[A-Z]{2}/).first

@@ -25,6 +25,9 @@ RSpec.describe Hotel, type: :model do
 	it "is invalid when average_price is not a number or it is less than (or equal to) 0" do
 		FactoryGirl.build(:hotel, average_price: 0).should_not be_valid
 	end
+	it "should respond_to users" do
+		expect(hotel).to respond_to(:users)
+	end
 	it "returns a list of associated users" do
 		user1 = FactoryGirl.create(:user, hotel_ids: [hotel.id])
 		expect(hotel.users).to match_array([user1])

@@ -21,7 +21,7 @@ class HotelsController < ApplicationController
 	    if @hotel.save
 	    	respond_to do |format|
 			    format.html { redirect_to hotels_path, notice: "Hotel created!" }
-			    format.js	{ render json: quote, status: :created }
+			    format.js	{ render json: @hotel, status: :created }
 			end
 	    else
 	    	render :new

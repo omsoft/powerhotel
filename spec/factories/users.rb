@@ -5,5 +5,6 @@ FactoryGirl.define do
     f.first_name "Gengis"
     f.last_name "Khan"
     f.password "my_secret_password"
+    f.hotels [FactoryGirl.build(:hotel), FactoryGirl.build(:hotel), FactoryGirl.build(:hotel)]
   end
 end
