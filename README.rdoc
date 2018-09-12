@@ -1,6 +1,6 @@
 == README
 
-This is a UalaTest App!
+This is a PowerHotel App!
 
 Things that can be improved in this application:
 
